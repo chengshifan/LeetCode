@@ -43,16 +43,3 @@ class Solution:
                 visited.append(last)
 
         return res
-
-
-root = TreeNode(1)
-r1 = TreeNode(2)
-r2 = TreeNode(3)
-r3 = TreeNode(-1)
-r4 = TreeNode(4)
-root.left = r1
-root.right = r2
-r1.left = r3
-r2.right =r4
-
-print(Solution().preorderTraversal(root))
