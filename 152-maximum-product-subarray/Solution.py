@@ -12,5 +12,3 @@ class Solution:
             num_min = pre_min
         return res
 
-
-print(Solution().maxProduct([-4, -1, -2]))
