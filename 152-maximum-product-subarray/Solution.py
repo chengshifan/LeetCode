@@ -2,13 +2,20 @@ from typing import List
 
 
 class Solution:
-    def maxProduct(self, nums: List[int]) -> int:
-        num_max, num_min, res = nums[0], nums[0], nums[0]
-        for i in range(1, len(nums)):
-            pre_max = max(num_max * nums[i], num_min * nums[i], nums[i])
-            pre_min = min(num_max * nums[i], num_min * nums[i], nums[i])
-            res = max(pre_max, res)
-            num_max = pre_max
-            num_min = pre_min
-        return res
+    def findMin(self, nums: List[int]) -> int:
+        if not nums or len(nums) == 0:
+            return None
+        if len(nums) == 1:
+            return nums[0]
+        n = len(nums)
+        begin, target = nums[0], 0
+        for i in range(1, n):
+            if nums[i] > nums[i - 1]:
+                continue
+            else:
+                target = i
+                break
+        return min(nums[target], nums[0])
 
+
+print(Solution().findMin([1, 1, 1, 1]))
