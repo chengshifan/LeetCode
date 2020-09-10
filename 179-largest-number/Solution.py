@@ -22,6 +22,3 @@ class Solution:
             ans += str(nums[max_new_num_index])
             visited[max_new_num_index] = True
         return ans
-
-
-print(Solution().largestNumber([3, 30, 31, 32]))
