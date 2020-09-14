@@ -38,6 +38,3 @@ class Solution:
                     return max(dp_1)
 
         return max(helper(nums), helper(nums[::-1]))
-
-
-print(Solution().rob([1,1,3,6,7,10,7,1,8,5,9,1,4,4,3]))
