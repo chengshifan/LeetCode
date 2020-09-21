@@ -21,5 +21,3 @@ class Solution:
         part_2 = helper(self.superPow(a, b[0:-1]), 10)
         return (part_1 * part_2) % 1337
 
-
-print(Solution().superPow(2, [1, 1]))
