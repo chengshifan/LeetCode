@@ -26,6 +26,3 @@ class Solution:
                     dp[i][j] = dp[i - 1][j]
 
         return dp[n - 1][half_num]
-
-
-print(Solution().canPartition([9, 5]))
