@@ -21,6 +21,3 @@ class Solution:
             end += 1
 
         return False
-
-
-print(Solution().isAdditiveNumber("1023"))
