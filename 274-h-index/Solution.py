@@ -9,13 +9,14 @@ class Solution:
         if min(citations) > n:
             return n
         while n >= 0:
-            arr_1, arr_2 = [], []
+            count = 0
             for citation in citations:
                 if citation >= n:
-                    arr_1.append(citation)
-                else:
-                    arr_2.append(citation)
-            if len(arr_1) >= n:
+                    count += 1
+                if count >= n:
+                    return n
+
+            if count >= n:
                 return n
             else:
                 n -= 1
